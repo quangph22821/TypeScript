@@ -4,6 +4,8 @@ var arr2 = [[1, 2, 3], [4, 5, 6],];
 var arr3 = ["a", "b", "c", "d"];
 //Tuples 
 var tuple = ["QuangHX", "Ha Nam", 20];
+tuple.push("1213");
+console.log(tuple);
 //Enum
 var STATUS;
 (function (STATUS) {
@@ -27,3 +29,6 @@ var upperCase = function (a) {
         console.log(a.toUpperCase);
     }
 };
+////////////////////
+var hobbies = ['spring', 'java'];
+console.log.apply(console, hobbies);

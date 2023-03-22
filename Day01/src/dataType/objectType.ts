@@ -7,6 +7,9 @@ const arr3 : string[] = ["a", "b", "c", "d"]
 
 //Tuples 
 const tuple : [string,string,number] = ["QuangHX","Ha Nam",20]
+tuple.push("1213")
+console.log(tuple);
+
 
 
 //Enum
@@ -26,3 +29,10 @@ const upperCase = (a:string | number) =>{
         
     }
 }
+
+
+////////////////////
+let hobbies = ['spring','java'];
+console.log(...hobbies);
+
+
