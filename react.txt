@@ -1,0 +1,27 @@
+// // const user ={
+    // //     name:"Hoang Xuan Quang",
+    // //     age: 20,
+    // // }
+
+    // // return (
+    // //     <div>
+    // //         <h1>Hello world</h1>
+    // //         <Avatar user={user} showInfo={() => console.log(user)}>
+    // //             {/* <h2>Lớp we17304</h2> */}
+    // //         </Avatar>
+    // //     </div>
+    // // )
+
+    // const [counter, setCounter] = useState(new Date().getSeconds())
+    // // function tangdan() {
+    // //     setCounter(counter + 1)
+    // // }
+    // // console.log(counter);
+
+    // return <div className="h-[100vh] flex flex-col justify-center items-center">
+    //     {/* <h1>{counter}</h1> */}
+    //     <h1>{new Date().toLocaleTimeString()}</h1>
+
+    //     {/* <button onClick={tangdan} className="border hover:bg-pink-500">Tăng dần</button> */}
+
+    // </div>
