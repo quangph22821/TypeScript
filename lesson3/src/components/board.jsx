@@ -49,52 +49,22 @@ const Board = () => {
     let next = ""
     if (win) {
         check = ` Winner is :${win}`;
-    } else if (!game.includes(null)) {
+    } else if (!game.includes(null)) {//kiểm tra xem tồn tại ng thắng hay k
+        console.log(!game.includes(null));
         check = "DRAW";
     } else {
-        next = `Next: ${player ? "X" : "O"}`;
+        next = `Next Player: ${player ? "X" : "O"}`;
     }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setTime(time - 1);
-            if (time <= 0) {
-                setTime(3);
-                if (!player === true || !player === false) {
-                    const gameRun = game.reduce((games, checkdanh, index) => {
-                        if (checkdanh === null) {
-                            return [...games, index];
-                        }
-                        return games;
-                    }, []);
-                    const random = Math.floor(Math.random() * gameRun.length);
-                    const position = gameRun[random];
-
-                    const newGame = game.map((games, index) => {
-                        if (index === position) {
-                            return player ? "X" : "O";
-                        }
-                        return games;
-                    });
-
-                    setGame(newGame);
-                    setPlayer(!player);
-                }
-            }
-        }, 1000);
-        if (checkerWiner() || !game.includes(null)) {
-            clearInterval(interval);
-        }
-        return () => clearInterval(interval);
-    }, [time, player, game]);
 
     const reloadGame = () => {
-        window.location.reload(true)
+        setGame(Array(9).fill(null))
+        return; 
     }
     return <>
-        <h2 className="text-2xl text-green-500">{next}</h2>
-        <h2 className="animate-bounce text-3xl text-pink-700">{check}</h2>
-        <h2 className="text-1.5xl my-5">Game start :{time}</h2>
+        <h2 className="text-2xl text-black-500 mb-4">{next}</h2>
+        <h2 className="animate-bounce text-3xl text-pink-700 mb-5">{check}</h2>
+        {/* <h2 className="text-1.5xl my-5">Game start :{time}</h2> */}
         <div className="grid grid-cols-3 gap-2 w-[240px] ">
             <Square value={game[0]} position={0} handlePlay={handlePlay} />
             <Square value={game[1]} position={1} handlePlay={handlePlay} />
@@ -108,7 +78,7 @@ const Board = () => {
         </div>
         <div className="">
             {/* <button onClick={play}>Undo</button> */}
-            <button onClick={reloadGame} className="h-10 px-6 font-semibold rounded-md bg-black text-white my-5">Reset</button>
+            <button onClick={reloadGame} className="h-10 px-6 font-semibold rounded-md bg-sky-500 hover:bg-sky-700  text-white my-5">Reset</button>
         </div>
 
     </>

@@ -25,3 +25,42 @@
     //     {/* <button onClick={tangdan} className="border hover:bg-pink-500">Tăng dần</button> */}
 
     // </div>
+
+
+
+    
+    // useEffect(() => {
+    //     const interval = setInterval(() => {// thiết lập thời gian chạy để random
+    //         setTime(time - 1);
+    //         if (time <= 0) {
+    //             setTime(3);
+    //             if (!player === true || !player === false) {
+    //                 const gameRun = game.reduce((games, checkdanh, index) => {// thực thi hàm lên các phần tử từ trái sang phải
+    //                     if (checkdanh === null) {
+    //                         console.log([...games]);
+    //                         return [...games, index];
+                            
+    //                     }
+    //                     return games;
+    //                 }, []);
+    //                 const random = Math.floor(Math.random() * gameRun.length);
+    //                 const position = gameRun[random];
+
+    //                 const newGame = game.map((games, index) => {
+    //                     if (index === position) {
+    //                         return player ? "X" : "O";
+    //                     }
+    //                     return games;
+    //                 });
+
+    //                 setGame(newGame);
+    //                 setPlayer(!player);
+    //             }
+    //         }
+    //     }, 1000);
+    //     //khi tìm đc ng thắng thì dừng hoạt động
+    //     if (checkerWiner() || !game.includes(null)) {
+    //         clearInterval(interval);
+    //     }
+    //     return () => clearInterval(interval);
+    // }, [time, player, game]);
